@@ -34,3 +34,14 @@ console.log(Object.keys(tinderUser)) // returns an array of keys
 console.log(Object.values(tinderUser)) // returns an array of values
 console.log(Object.entries(tinderUser)) // nested array key and the value
 console.log(tinderUser.hasOwnProperty('name'))
+
+
+// destructuring in JS -> extract the value from the objects
+const course = {
+    name: "JavaScript",
+    price: "999",
+    lang: "english"
+}
+
+const {name: courseName} = course
+console.log("Course name is", courseName)
