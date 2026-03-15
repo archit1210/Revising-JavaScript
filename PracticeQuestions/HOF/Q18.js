@@ -1,0 +1,15 @@
+const fruits = ["apple","banana","apple","orange","banana","apple"];
+
+const result = fruits.reduce((acc, fruit) => {
+  
+  if (acc[fruit]) {
+    acc[fruit] = acc[fruit] + 1;
+  } else {
+    acc[fruit] = 1;
+  }
+
+  return acc;
+
+}, {});
+
+console.log(result);
