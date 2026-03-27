@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black {
+            background-color: #191919;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <ul class="lang">
+        <li>JS</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(name) {
+        const element = document.createElement('li')
+        element.innerHTML = `${name}`
+        const parent = document.querySelector('ul')
+        parent.appendChild(element)
+    }
+
+    addLanguage('TS')
+    addLanguage('Go')
+    addLanguage('C++')
+
+
+    // edit 
+    const second = document.querySelector('li:nth-child(2)')
+    const newElement = document.createElement('li')
+    newElement.textContent = 'python'
+    second.replaceWith(newElement)
+
+    //remove last lang
+    const last = document.querySelector('li:last-child')
+    last.remove()
+</script>
+</html>
