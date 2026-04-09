@@ -1,0 +1,32 @@
+.parent {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#pink {
+    background-color: pink;
+}
