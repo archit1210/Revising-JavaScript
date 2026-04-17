@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Archit doing JS</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <script>
+
+    const printName = function() {
+        console.log('Archit', new Date().toLocaleString())
+    }
+
+    let intervalId = setInterval(printName, 1000);
+
+    document.querySelector('#start').addEventListener('click', function(){
+        if (!intervalId) {
+            intervalId = null
+            intervalId = setInterval(printName, 1000);
+            console.log('started')
+        }
+    })
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalId)
+        intervalId = null
+        console.log('stopped')
+    })
+</script>
+</body>
+</html>
